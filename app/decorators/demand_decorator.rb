@@ -1,0 +1,2 @@
+class DemandDecorator < ApplicationDecorator
+end
