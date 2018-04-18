@@ -10,3 +10,8 @@ Item.create!(description: 'Bottles', sender: 'Lindsay')
 Item.create!(description: 'Nipple guards', sender: 'Lindsay')
 Item.create!(description: 'Teether', sender: 'Rowan')
 Item.create!(description: 'Wipes', sender: 'Brandan')
+
+User.destroy_all
+User.create!(username: 'brandan', password: 'nadnarb')
+User.create!(username: 'eric', password: 'julie')
+User.create!(username: 'julie', password: 'eric')
