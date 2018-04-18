@@ -1,0 +1,13 @@
+.container
+  .jumbotron
+    %h1.display-4 Hello, friends!
+    %p.lead We have our first baby on the way, and we know you have old baby stuff! Give it to us!
+
+  .row.justify-content-between
+    .col-5
+      %h4 What We Need
+      %ul.list-group= render demands
+
+    .col-5
+      %h4 What We Have
+      %ul.list-group= render items
