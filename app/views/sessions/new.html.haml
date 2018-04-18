@@ -1,0 +1,25 @@
+.container.mt-5
+  .row.justify-content-center
+    .col-4
+      = form_with url: session_path, local: true do |f|
+        .form-group.row
+          .col-12
+            %h1 Log In
+
+        - if flash.key?(:alert)
+          .alert.alert-danger= flash[:alert]
+
+        .form-group.row
+          = f.label :username, 'Name', class: 'col-form-label col-4'
+          .col-8
+            = f.text_field :username, class: 'form-control'
+
+        .form-group.row
+          = f.label :password, class: 'col-form-label col-4'
+          .col-8
+            = f.password_field :password, class: 'form-control'
+
+        .form-group.row
+          .col-12.text-right
+            = link_to 'Back', root_url, class: 'btn btn-link'
+            = f.submit 'Log In', class: 'btn btn-primary'
