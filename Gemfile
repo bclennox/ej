@@ -6,10 +6,12 @@ gem 'rails', '~> 5.2.0'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.1.0'
 gem 'draper'
 gem 'coffee-rails', '~> 4.2'
 gem 'haml'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
