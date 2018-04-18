@@ -3,8 +3,8 @@
     %h1.display-4 Hello, friends!
     %p.lead We have our first baby on the way, and we know you have old baby stuff! Give it to us!
 
-  .row.justify-content-between
-    .col-5
+  .row.mt-5.justify-content-between
+    .col-md
       %h4 What We Need
 
       - if logged_in?
@@ -15,7 +15,9 @@
 
       %ul.list-group.demands= render demands
 
-    .col-5
+    .w-100.mt-5.d-md-none
+
+    .col-md
       %h4 What We Have So Far
 
       = form_with model: item, class: 'form-inline mb-2 justify-content-end' do |f|
