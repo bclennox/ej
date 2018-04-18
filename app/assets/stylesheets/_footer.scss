@@ -1,6 +1,6 @@
 // https://getbootstrap.com/docs/4.1/examples/sticky-footer/
 
-$footer-height: 60px;
+$footer-height: 4 * $spacer;
 
 html {
   position: relative;
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  margin-bottom: $footer-height;
+  margin-bottom: $footer-height + ($spacer * 2);
 }
 
 .footer {
