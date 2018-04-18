@@ -17,4 +17,12 @@
 
     .col-5
       %h4 What We Have
+
+      = form_with model: item, class: 'form-inline mb-2 justify-content-end' do |f|
+        = f.label :sender, 'Your name', class: 'sr-only'
+        = f.text_field :sender, placeholder: 'Your name', class: 'form-control w-25 mr-2'
+        = f.label :description, 'Your item', class: 'sr-only'
+        = f.text_field :description, placeholder: 'Your item', class: 'form-control w-50 mr-2'
+        = f.submit 'Add', class: 'btn btn-info'
+
       %ul.list-group.items= render items
