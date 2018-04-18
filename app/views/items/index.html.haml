@@ -6,8 +6,15 @@
   .row.justify-content-between
     .col-5
       %h4 What We Need
-      %ul.list-group= render demands
+
+      - if logged_in?
+        = form_with model: demand, class: 'form-inline mb-2 justify-content-end' do |f|
+          = f.label :description, class: 'sr-only'
+          = f.text_field :description, placeholder: 'Request another item', class: 'form-control w-50 mr-2'
+          = f.submit 'Add', class: 'btn btn-info'
+
+      %ul.list-group.demands= render demands
 
     .col-5
       %h4 What We Have
-      %ul.list-group= render items
+      %ul.list-group.items= render items

@@ -1,1 +1,4 @@
-%li.list-group-item= demand.description
+%li.list-group-item{class: demand.met_class}
+  .d-flex.justify-content-between
+    .col= demand.description
+    .col.text-right= demand.action_link
