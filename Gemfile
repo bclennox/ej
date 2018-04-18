@@ -8,6 +8,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'draper'
 gem 'coffee-rails', '~> 4.2'
+gem 'haml'
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -19,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'awesome_print'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
