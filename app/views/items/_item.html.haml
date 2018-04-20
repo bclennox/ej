@@ -1,4 +1,7 @@
-%li.list-group-item
+%li.list-group-item[item]
   .col
     %span.description= item.description
     %small.mt-1.float-right.sender= item.sender
+
+    - if logged_in?
+      %span.actions= item.remove_link

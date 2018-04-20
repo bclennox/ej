@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :verify_user, only: [:destroy]
   decorates_assigned :demand, :demands, :item, :items
 
   def index
@@ -14,6 +15,10 @@ class ItemsController < ApplicationController
     session[:sender] = item.sender
 
     redirect_to root_path
+  end
+
+  def destroy
+    @item = Item.destroy(params[:id])
   end
 
   private

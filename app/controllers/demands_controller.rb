@@ -21,8 +21,4 @@ class DemandsController < ApplicationController
   def demand_params
     params.require(:demand).permit(:description)
   end
-
-  def verify_user
-    head :unauthorized unless logged_in?
-  end
 end
