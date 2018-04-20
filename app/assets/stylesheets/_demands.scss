@@ -1,0 +1,20 @@
+.demands {
+  .met {
+    .met-icon {
+      position: absolute;
+      left: -9px;
+      top: 2px;
+      color: $success;
+    }
+
+    .description {
+      text-decoration: line-through;
+    }
+  }
+
+  .actions {
+    position: absolute;
+    right: -5px;
+    top: 2px;
+  }
+}

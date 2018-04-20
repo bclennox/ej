@@ -1,4 +1,9 @@
-%li.list-group-item{class: demand.met_class}
-  .d-flex.justify-content-between
-    .col= demand.description
-    .col.text-right= demand.action_link
+%li.list-group-item[demand]{class: demand.met_class}
+  .col
+    = demand.met_icon
+    %span.description= demand.description
+
+    - if logged_in?
+      %span.actions
+        = demand.action_link
+        = demand.remove_link

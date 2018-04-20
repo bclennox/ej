@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @demand = Demand.new
-    @demands = (logged_in? ? Demand.all : Demand.unmet).order(created_at: :desc)
+    @demands = Demand.order(:met).order(created_at: :desc)
 
     @item = Item.new(sender: session[:sender])
     @items = Item.order(created_at: :desc)

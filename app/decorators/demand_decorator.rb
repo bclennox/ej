@@ -1,21 +1,31 @@
 class DemandDecorator < ApplicationDecorator
+  def haml_object_ref
+    'demand'
+  end
+
   def met_class
-    'list-group-item-success' if met?
+    'met' if met?
+  end
+
+  def met_icon
+    icon('check', style: 'fas', title: 'Got it!', classes: 'met-icon') if met?
   end
 
   def action_link
-    if h.logged_in?
-      h.link_to action_icon, h.demand_path(object, met: !met), method: :patch
-    end
+    h.link_to action, h.demand_path(object, met: !met), method: :patch, remote: true, class: 'mr-1'
+  end
+
+  def remove_link
+    h.link_to icon('times', style: 'fas'), h.demand_path(object, met: !met), method: :delete, remote: true, data: { confirm: 'Delete this item?' }
   end
 
   private
 
-  def action_icon
+  def action
     if met?
-      h.fa_icon('times', title: 'Still need it')
+      icon('dot-circle')
     else
-      h.fa_icon('check', title: 'Got it!')
+      icon('circle')
     end
   end
 end
