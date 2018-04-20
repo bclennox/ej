@@ -5,6 +5,14 @@
     %hr.my-4
     %p Please don't buy anything new. (Except diapers. We don't need used diapers.)
 
+  .row.mt-5.justify-content-center
+    .col-md-6
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            %i.fas.fa-search
+        = search_field_tag 'search', nil, class: 'form-control form-control-lg', placeholder: 'Search'
+
   .row.mt-5.justify-content-between
     .col-md-5
       %h4 What We Need

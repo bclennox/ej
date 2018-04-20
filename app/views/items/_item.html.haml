@@ -1,3 +1,4 @@
-%li.list-group-item.d-flex.justify-content-between.align-items-center
-  = item.description
-  %span.badge.badge-light.badge-pill= item.sender
+%li.list-group-item
+  .col
+    %span.description= item.description
+    %small.mt-1.float-right.sender= item.sender
