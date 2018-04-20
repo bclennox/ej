@@ -1,7 +1,9 @@
 .container
   .jumbotron
     %h1.display-4 Hello, friends!
-    %p.lead We have our first baby on the way, and we know you have old baby stuff! Give it to us!
+    %p.lead We have our first baby on the way, and we'd love to use your old baby stuff! If you have anything you'd like to get rid of, add it to the list below, and we'll take it off your hands.
+    %hr.my-4
+    %p Please don't buy anything new. (Except diapers. We don't need used diapers.)
 
   .row.mt-5.justify-content-between
     .col-md-5
@@ -18,7 +20,7 @@
     .w-100.mt-5.d-md-none
 
     .col-md-5
-      %h4 What We Have So Far
+      %h4 What's Been Offered
 
       = form_with model: item, class: 'form-inline mb-2 justify-content-end' do |f|
         = f.label :description, 'Your item', class: 'sr-only'
