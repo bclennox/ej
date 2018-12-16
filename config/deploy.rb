@@ -1,4 +1,4 @@
-lock "~> 3.10.2"
+lock "~> 3.11.0"
 
 set :application, 'ej.bclennox.com'
 set :repo_url, 'github-bclennox:bclennox/ej'
